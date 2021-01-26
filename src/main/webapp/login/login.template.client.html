@@ -2,9 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
-
+<div class="container">
+    <h1>Sign In</h1>
+    <form action="../profile/profile.template.client.html">
+        <div class="form-group row">
+            <label for="username" class="col-sm-2 col-form-label">
+                Username </label>
+            <div class="col-sm-6">
+                <input class="form-control wbdv-field wbdv-username"
+                       id="username"
+                       placeholder="Alice">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="password" class="col-sm-2 col-form-label">
+                Password </label>
+            <div class="col-sm-6">
+                <input type="password" class="form-control wbdv-field wbdv-password"
+                       id="password" placeholder="123qwe#$%">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-6">
+                <button class="btn btn-primary btn-block wbdv-login">Sign in</button>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="../register/register.template.client.html" class="float-right">Sign up</a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="../index.html">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
 </body>
 </html>

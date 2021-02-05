@@ -31,7 +31,6 @@ function selectUser(event) {
 }
 
 function deleteUser(event) {
-    console.log(event.target)
     var deleteBtn = jQuery(event.target)
     var theClass = deleteBtn.attr("class")
     var theIndex = deleteBtn.attr("id")
@@ -56,9 +55,10 @@ function renderUsers(users) {
         <td>${user.firstName}</td>
         <td>${user.lastName}</td>
         <td>${user.role}</td>
-        <td>
+        <td><span class="pull-right" style="white-space: nowrap">
             <i class="fa-2x fa fa-times wbdv-delete" id="${i}"></i>
-            <i class="fa-2x fa fa-pencil-alt wbdv-select" id="${user._id}></i>
+            <i class="fa-2x fa fa-pencil wbdv-select" id="${user._id}"></i>
+            </span>
         </td>
     </tr>
   `)
@@ -70,12 +70,11 @@ function renderUsers(users) {
 }
 
 function updateUser() {
-  console.log(selectedUser)
   selectedUser.username = $usernameFld.val()
   selectedUser.password = $passwordFld.val()
-  selectedUser.password = $firstNameFld.val()
-  selectedUser.password = $lastNameFld.val()
-  selectedUser.semester = $roleFld.val()
+  selectedUser.firstName = $firstNameFld.val()
+  selectedUser.lastName = $lastNameFld.val()
+  selectedUser.role = $roleFld.val()
   userService.updateUser(selectedUser._id, selectedUser)
     .then(function (status) {
       var index = users.findIndex(user => user._id === selectedUser._id)

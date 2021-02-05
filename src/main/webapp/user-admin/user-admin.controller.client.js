@@ -3,9 +3,9 @@ var $passwordFld
 var $firstNameFld
 var $lastNameFld
 var $roleFld
-var $createBtn
+var $createIcon
 var theTableBody
-var $updateBtn
+var $updateIcon
 var userService = new UserServiceClient()
 
 var users = [];
@@ -85,17 +85,17 @@ function updateUser() {
 }
 
 function main() {
-  $usernameFld = $(".wbdv-username-fld")
-  $passwordFld = $(".wbdv-password-fld")
-  $firstNameFld = $(".wbdv-firstName-fld")
-  $lastNameFld = $(".wbdv-lastName-fld")
-  $roleFld = $(".wbdv-role-fld")
-  $createBtn = $(".wbdv-create")
-  $updateBtn = $(".wbdv-update")
+  $usernameFld = $(".wbdv-usernameFld")
+  $passwordFld = $(".wbdv-passwordFld")
+  $firstNameFld = $(".wbdv-firstNameFld")
+  $lastNameFld = $(".wbdv-lastNameFld")
+  $roleFld = $(".wbdv-roleFld")
+  $createIcon = $(".wbdv-create")
+  $updateIcon = $(".wbdv-update")
   theTableBody = jQuery("tbody")
 
-  $updateBtn.click(updateUser)
-  $createBtn.click(() => {
+  $updateIcon.click(updateUser)
+  $createIcon.click(() => {
       createUser({
         username: $usernameFld.val(),
         password: $passwordFld.val(),

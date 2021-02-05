@@ -38,7 +38,7 @@ function UserServiceClient() {
       body: JSON.stringify(user)
     }).then(response => response.json())
   }
-  function deleteUserasdfasdf(userId) {
+  function deleteUser(userId) {
     return fetch(`${self.url}/${userId}`,
       {method: 'DELETE'})
   }

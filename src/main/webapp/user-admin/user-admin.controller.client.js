@@ -90,12 +90,12 @@ function main() {
   $firstNameFld = $(".wbdv-firstName-fld")
   $lastNameFld = $(".wbdv-lastName-fld")
   $roleFld = $(".wbdv-role-fld")
-  $createIcon = $(".wbdv-create")
-  $updateIcon = $(".wbdv-update")
+  $createBtn = $(".wbdv-create")
+  $updateBtn = $(".wbdv-update")
   theTableBody = jQuery("tbody")
 
-  $updateIcon.click(updateUser)
-  $createIcon.click(() => {
+  $updateBtn.click(updateUser)
+  $createBtn.click(() => {
       createUser({
         username: $usernameFld.val(),
         password: $passwordFld.val(),

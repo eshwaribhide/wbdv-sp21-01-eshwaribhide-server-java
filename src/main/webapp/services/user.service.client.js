@@ -28,7 +28,7 @@ function UserServiceClient() {
     return fetch(`${self.url}/${userId}`,
           {method: 'GET'})
       }
-  }
+
   function updateUser(userId, user) {
     return fetch(`${self.url}/${userId}`, {
       method: 'PUT',
@@ -38,7 +38,7 @@ function UserServiceClient() {
       body: JSON.stringify(user)
     }).then(response => response.json())
   }
-  function deleteUser(userId) {
+  function deleteUserasdfasdf(userId) {
     return fetch(`${self.url}/${userId}`,
       {method: 'DELETE'})
   }

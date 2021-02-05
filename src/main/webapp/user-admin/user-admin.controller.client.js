@@ -48,7 +48,7 @@ function renderUsers(users) {
   for (var i = 0; i < users.length; i++) {
     var user = users[i]
     theTableBody
-      .prepend(`
+      .append(`
     <tr>
         <td>${user.username}</td>
         <td>${user.password}</td>

@@ -56,16 +56,16 @@ function renderUsers(users) {
         <td>${user.lastName}</td>
         <td>${user.role}</td>
         <td><span class="pull-right" style="white-space: nowrap">
-            <i class="fa-2x fa fa-times wbdv-delete" id="${i}"></i>
-            <i class="fa-2x fa fa-pencil wbdv-select" id="${user._id}"></i>
+            <button class="wbdv-delete-btn"><i class="fa-2x fa fa-times" id="${i}"></i></button>
+            <button class="wbdv-select-btn"><i class="fa-2x fa fa-pencil" id="${user._id}"></i></button>
             </span>
         </td>
     </tr>
   `)
   }
-  jQuery(".wbdv-delete")
+  jQuery(".wbdv-delete-btn")
     .click(deleteUser)
-  jQuery(".wbdv-select")
+  jQuery(".wbdv-select-btn")
     .click(selectUser)
 }
 
@@ -89,8 +89,8 @@ function main() {
   $firstNameFld = $(".wbdv-firstNameFld")
   $lastNameFld = $(".wbdv-lastNameFld")
   $roleFld = $(".wbdv-roleFld")
-  $createIcon = $(".wbdv-create")
-  $updateIcon = $(".wbdv-update")
+  $createIcon = $(".wbdv-create-btn")
+  $updateIcon = $(".wbdv-update-btn")
   theTableBody = jQuery("tbody")
 
   $updateIcon.click(updateUser)

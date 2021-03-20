@@ -10,16 +10,16 @@ import java.util.List;
 @Service
 public class WidgetService {
     private List<Widget> widgets = new ArrayList<Widget>();
-    {
-        Widget w1 = new Widget(123L, "ABC123", "HEADING", 1, "Welcome to Widgets");
-        Widget w2 = new Widget(234L, "ABC234", "PARAGRAPH", 1, "This is a paragraph");
-        Widget w3 = new Widget(345L, "ABC234", "HEADING", 2, "Welcome to WebDev");
-        Widget w4 = new Widget(456L, "ABC234", "PARAGRAPH", 1, "Lorem ipsum");
-        widgets.add(w1);
-        widgets.add(w2);
-        widgets.add(w3);
-        widgets.add(w4);
-    }
+//    {
+//        Widget w1 = new Widget(123L, "ABC123", "HEADING", 1, "Welcome to Widgets");
+//        Widget w2 = new Widget(234L, "ABC234", "PARAGRAPH", 1, "This is a paragraph");
+//        Widget w3 = new Widget(345L, "ABC234", "HEADING", 2, "Welcome to WebDev");
+//        Widget w4 = new Widget(456L, "ABC234", "PARAGRAPH", 1, "Lorem ipsum");
+//        widgets.add(w1);
+//        widgets.add(w2);
+//        widgets.add(w3);
+//        widgets.add(w4);
+//    }
     // implement crud operations
     public Widget createWidgetForTopic(Widget widget) {
         Long id = (new Date()).getTime();

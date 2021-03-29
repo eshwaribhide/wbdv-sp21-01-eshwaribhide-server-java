@@ -74,6 +74,7 @@ public class WidgetService {
         originalWidget.setCssClass(newWidget.getUrl());
         originalWidget.setStyle(newWidget.getStyle());
         originalWidget.setValue(newWidget.getValue());
+        originalWidget.setOrdered(newWidget.getOrdered());
 
         repository.save(originalWidget);
         return 1;

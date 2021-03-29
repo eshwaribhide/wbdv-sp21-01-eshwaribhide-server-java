@@ -22,6 +22,7 @@ public class Widget {
     private String cssClass;
     private String style;
     private String value;
+    private Boolean ordered;
 
 
 
@@ -42,6 +43,7 @@ public class Widget {
         this.cssClass = null;
         this.style = null;
         this.value = null;
+        this.ordered= false;
     }
 
     public String getName() {
@@ -148,6 +150,14 @@ public class Widget {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public Boolean getOrdered() {
+        return ordered;
+    }
+
+    public void setOrdered(Boolean ordered) {
+        this.ordered = ordered;
     }
 }
 
